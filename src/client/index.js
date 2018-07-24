@@ -1,5 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import Timer from './timer/component';
+import timer from './timer/reducer';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(timer);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <div>
+      <Timer updateInterval={100} />
+    </div>
+  </Provider>,
+  document.getElementById('root')
+);
