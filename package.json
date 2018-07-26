@@ -12,6 +12,7 @@
   "author": "Justin Knutson",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^1.4.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "express": "^4.16.3",
     "prop-types": "^15.6.2",

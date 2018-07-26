@@ -1,8 +1,14 @@
 import {
+  key,
   START_TIMER,
   STOP_TIMER,
   RESET_TIMER
 } from './actions';
+
+export const selectors = {
+  value: state => state[key].value,
+  status: state => state[key].status,
+};
 
 const initialState = {
   startedAt: undefined,
@@ -17,7 +23,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         baseTime: action.baseTime,
-        startedAt: state.stoppedAt ? Date.now() : (state.startedAt || Date.now()),
+        startedAt: state.stoppedAt ? state.startedAt : (state.startedAt || Date.now()),
         stoppedAt: undefined,
       };
     case STOP_TIMER:

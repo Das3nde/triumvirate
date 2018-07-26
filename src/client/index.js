@@ -1,17 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import Timer from './timer/component';
-import timer from './timer/reducer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
-const store = createStore(timer);
+import Countdown from './countdown/component';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#484848',
+      main: '#212121',
+      dark: '#000000',
+      contrastText: '#ffffff'
+    }
+  }
+});
 
 ReactDOM.render(
-  <Provider store={store}>
-    <div>
-      <Timer updateInterval={100} />
-    </div>
-  </Provider>,
+  <React.Fragment>
+    <CssBaseline>
+      <MuiThemeProvider theme={theme}>
+        <div align="center">
+          <Typography>
+            <h1>
+              Triumvirate Countdown
+            </h1>
+            <Typography variant="subheading">
+              <Countdown updateInterval={100} endTime={new Date('April 27, 2019 12:00:00')} />
+            </Typography>
+            <p>
+              <em>
+                {'What\'s the matter? CIA got you pushing too many pencils?'}
+              </em>
+            </p>
+          </Typography>
+        </div>
+      </MuiThemeProvider>
+    </CssBaseline>
+  </React.Fragment>,
   document.getElementById('root')
 );
