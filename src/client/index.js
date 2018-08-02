@@ -5,6 +5,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 import Countdown from './countdown/component';
+import RandomQuote from './random-quote/component';
 
 const theme = createMuiTheme({
   palette: {
@@ -31,7 +32,7 @@ ReactDOM.render(
             </Typography>
             <p>
               <em>
-                {'What\'s the matter? CIA got you pushing too many pencils?'}
+                <RandomQuote />
               </em>
             </p>
           </Typography>
