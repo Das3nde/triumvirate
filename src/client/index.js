@@ -28,7 +28,7 @@ ReactDOM.render(
               Triumvirate Countdown
             </h1>
             <Typography variant="subheading">
-              To Be Determined... Check Back in May
+              To Be Determined...
             </Typography>
             <p>
               <em>
