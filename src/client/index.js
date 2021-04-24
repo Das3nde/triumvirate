@@ -28,7 +28,7 @@ ReactDOM.render(
               Triumvirate Countdown
             </h1>
             <Typography variant="subheading">
-              <Countdown updateInterval={100} endTime={new Date('April 24, 2021 12:00:00')} />
+              Yes!
             </Typography>
             <p>
               <em>
