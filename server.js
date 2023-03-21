@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(express.static(kdist/triumvirate'));
+app.use(express.static('dist/triumvirate'));
 
 app.get('/', function(req, res) {
     res.sendFile(path.resolve('dist/triumvirate/index.html'));
