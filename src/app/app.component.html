@@ -1,19 +1,32 @@
-<h1>Is it the Triumvirate today?</h1>
-<div ng-cloak *ngIf="isTriumvirate; else countdown">
-  <h2>Yes, it is!</h2>
-</div>
-<ng-template ng-cloak #countdown>
-  <div>
-    <h2>No, it is not</h2>
-    <p>The next triumvirate will be on {{nextTriumvirateDate.toDateString()}}</p>
-    <p>
-      <span>{{daysUntil}} Days</span>
-      <span>&nbsp;</span>
-      <span>{{hoursUntil}} Hours</span>
-      <span>&nbsp;</span>
-      <span>{{minutesUntil}} Minutes</span>
-      <span>&nbsp;</span>
-      <span>{{secondsUntil}} Seconds</span>
+<style>
+  .content {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+</style>
+<div class="mat-typography content">
+  <div class="mat-headline-1">Is it the Triumvirate today?</div>
+  <div ng-cloak *ngIf="isTriumvirate; else countdown">
+    <div class="mat-headline-2">Yes, it is!</div>
   </div>
-</ng-template>
-<app-random-quote></app-random-quote>
+  <ng-template ng-cloak #countdown>
+      <div class="mat-headline-2">No, it is not</div>
+      <p>The next triumvirate will be on
+        <span> {{nextTriumvirateDate.getDate()}}</span>
+        <span> April</span>
+        <span> {{nextTriumvirateDate.getFullYear()}}</span>
+      </p>
+      <p class="mat-body-strong">
+        <span>{{daysUntil}} Days</span>
+        <span>&nbsp;</span>
+        <span>{{hoursUntil}} Hours</span>
+        <span>&nbsp;</span>
+        <span>{{minutesUntil}} Minutes</span>
+        <span>&nbsp;</span>
+        <span>{{secondsUntil}} Seconds</span>
+      </p>
+  </ng-template>
+  <hr>
+  <app-random-quote></app-random-quote>
+</div>
