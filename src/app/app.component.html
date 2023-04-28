@@ -18,13 +18,10 @@
         <span> {{nextTriumvirateDate.getFullYear()}}</span>
       </p>
       <p class="mat-body-strong">
-        <span>{{daysUntil}} Days</span>
-        <span>&nbsp;</span>
-        <span>{{hoursUntil}} Hours</span>
-        <span>&nbsp;</span>
-        <span>{{minutesUntil}} Minutes</span>
-        <span>&nbsp;</span>
-        <span>{{secondsUntil}} Seconds</span>
+        <span *ngIf="daysUntil">{{daysUntil}} Days&nbsp;</span>
+        <span *ngIf="hoursUntil">{{hoursUntil}} Hours&nbsp;</span>
+        <span *ngIf="minutesUntil">{{minutesUntil}} Minutes&nbsp;</span>
+        <span *ngIf="secondsUntil">{{secondsUntil}} Seconds</span>
       </p>
   </ng-template>
   <hr>
