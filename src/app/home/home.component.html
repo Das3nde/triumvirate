@@ -1,0 +1,22 @@
+<div class="mat-typography content">
+  <div class="mat-headline-1">Is it the Triumvirate today?</div>
+  <div ng-cloak *ngIf="isTriumvirate; else countdown">
+    <div class="mat-headline-2">Yes, it is!</div>
+  </div>
+  <ng-template ng-cloak #countdown>
+      <div class="mat-headline-2">No, it is not</div>
+      <p>The next triumvirate will be on
+        <span> {{nextTriumvirateDate.getDate()}}</span>
+        <span> April</span>
+        <span> {{nextTriumvirateDate.getFullYear()}}</span>
+      </p>
+      <p class="mat-body-strong">
+        <span *ngIf="daysUntil">{{daysUntil}} Days&nbsp;</span>
+        <span *ngIf="hoursUntil">{{hoursUntil}} Hours&nbsp;</span>
+        <span *ngIf="minutesUntil">{{minutesUntil}} Minutes&nbsp;</span>
+        <span *ngIf="secondsUntil">{{secondsUntil}} Seconds</span>
+      </p>
+  </ng-template>
+  <hr>
+  <app-random-quote></app-random-quote>
+</div>
