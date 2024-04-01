@@ -1,8 +1,16 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { RulesComponent } from './rules/rules.component';
+import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { RandomQuoteComponent } from './random-quote/random-quote.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    CommonModule,
+    NgIf,
+    RandomQuoteComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
