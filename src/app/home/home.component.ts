@@ -2,6 +2,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { RandomQuoteComponent } from '../random-quote/random-quote.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -11,6 +12,7 @@ import { RandomQuoteComponent } from '../random-quote/random-quote.component';
   imports: [
     CommonModule,
     NgIf,
+    RouterModule,
     RandomQuoteComponent
   ]
 })
