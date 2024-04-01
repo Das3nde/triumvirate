@@ -8,8 +8,8 @@ describe('RandomQuoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RandomQuoteComponent ]
-    })
+    imports: [RandomQuoteComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(RandomQuoteComponent);
